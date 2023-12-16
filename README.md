@@ -63,7 +63,7 @@
 
 <details open="">
 <summary>
- 📔 Personal Portfoilo:
+ 📔 Student Form:
 </summary>
 <br>
 <p align="center">
