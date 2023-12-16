@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Detail Form</title>
+	<style>
+		fieldset {
+    		display: block;
+			width: 50%;
+			text-align:center;
+			margin-left: 25%;
+    		margin-right: 25%;
+				}
+		button:hover {
+			 background-color:#1E90FF;
+				}
+	</style>
+
+	<style>
+		input,select,button{
+			padding: 5px 8px;
+			margin: 4px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			box-sizing: border-box;
+		}
+		select{
+			padding:11px;
+			width:100%;
+			border-radius:4px;
+			text-decoration:bold;
+			}
+		input[type=text],input[type=date],input[type=mail],input[type=tel],input[type=date]{
+			padding:11px;
+			width:99%;
+			box-sizing:border-box;
+		}
+
+		input[type=submit] {
+			background-color: #1E90FF;
+			color: white;
+			padding: 5px 8px;
+			margin: 4px 0;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+			background-color:#45a049;
+		}
+	input[type=text]{
+			text-transform:uppercase;
+		}
+		input[type=text]:focus,input[type=date]:focus,input[type=tel]:focus,input[type=mail]:focus,input[type=marks]:focus,input[type=month]:focus {
+			background-color:powderblue;
+		}
+		input[type=marks],input[type=month]{
+		width:100%;
+		}
+	</style>
+
+	<style>
+		legend{
+			color:#1E90FF;
+		}
+		th{
+		text-align:center;
+		}
+
+		td{
+		text-align:left;
+		}
+		</style>
+
+		</style>
+<script src="formjs.js">
+</script>
+</head>
+
+<body style="background-image: url('C:/Users/acer/OneDrive/Desktop/Student form/image.jpg'); 
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;">
+
+<form name="form" onsubmit="return text()" action="form.php" method="post" enctype="multipart/form-data" >
+	
+	<fieldset style="border-radius:30px;border:3px solid black;">
+		<legend><h1 style="text-shadow:5px 5px 5px blue;">Personal Detail</h1></legend>
+	
+		<table align="center">
+		<tr>
+			<th>
+			Profile photo</th>
+			<th>:</th>
+			<td><input type="file" name="image" accept="image/*"></td>
+		</tr>
+			<tr>
+				<th>First Name</td>
+				<td>:</td>
+				<td><input type="text"  name="fname" id="f1" placeholder="FirstName" maxlength="10"  autocomplete="on" ></td>
+			</tr>
+			
+			<tr>
+				<th>Middle Name</th>
+				<td>:</td>
+				<td><input type="text" name="mname" id="m1" placeholder="MiddleName"  maxlength="10" autocomplete="on" ></td>
+			</tr>
+		
+			<tr>
+				<th>Last Name</th>
+				<td>:</td>
+				<td><input type="text" name="lname" id="l1" placeholder="LastName"  maxlength="10" autocomplete="on" ></td>
+			</tr>
+			<tr>
+				<th>Gender</th>
+				<td>:</td>
+				<td><input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female">Female</td>
+			</tr>
+			<tr>
+				<th>Date Of Birth</th>
+				<td>:</td>
+				<td><input type="date" name="dob" id="dob1" placeholder="dd/mm/yyyy"></td>
+			</tr>
+			<tr>		
+				<th>Contact</th>
+				<td>:</td>
+				<td><input type="tel" name="phoneno" maxlength="10" id="pno1" ></td>
+			</tr>
+
+			<tr>
+				<th>Email</th>
+				<td>:</td>.
+				<td><input type="mail" name="email" id="mail1" ></td>
+			</tr>
+
+			<tr>
+				<th>Address</th>
+				<td>:</td>
+				<td><textarea name="address" rows="3" cols="29" ></textarea></td>
+			</tr>
+		</table>
+	</fieldset>
+
+	<br>
+
+	
+<fieldset style="border-radius:30px;border:3px solid black;"> 
+<legend><h1 style="text-shadow:5px 5px 5px brown;">Education Qualification</h1></legend>
+	<table  align="center" cellpadding=10 >
+		<caption><strong>Inter Graduate</strong></caption>
+			<tr>
+				<th>Education</th>
+				<th>Year</th>
+				<th>Percentage</th>
+			</tr>
+			<tr>
+				<th>SSC</th>
+				<td><input type="month" name="ssc"    autocomplete="on" id="s1" ></td>
+				<td><input type="marks" name="mssc" maxlength="6"  autocomplete="on" id="m11" ></td>
+			</tr>
+			<tr>
+				<th>HSC</th>
+				<td><input type="month" name="hsc"    autocomplete="on" id="h1"></td>
+				<td><input type="marks" name="mhsc" maxlength="6"  autocomplete="on" id="m2" ></td>
+			</tr>
+		</table>
+<table align="center" cellpadding=10>
+		<caption><strong>Graduate</strong><br><b style="color:red">NOTE:</b>Please Write NA if the particular Semester is Not Applicable</caption>
+			<tr>
+				<th>Education</th>
+				<th>Year</th>
+				<th>CGPA</th>
+			</tr>
+				<th>Sem-I</th>
+				<td><input type="month" name="sem1" id="sy"   autocomplete="on"></td>
+				<td><input type="marks" name="msem1"  id="s11" maxlength="4"   autocomplete="on"></td>
+			</tr>
+			<tr>
+				<th>Sem-&#8545;</th>
+				<td><input type="month" name="sem2" id="sy1"   autocomplete="on"></td>
+				<td><input type="marks" name="msem2"   id="s12"  maxlength="4" autocomplete="on"></td>
+			</tr>
+			<tr>
+				<th>Sem-&#8546;</th>
+				<td><input type="month" name="sem3"  id="sy2"  autocomplete="on"></td>
+				<td><input type="marks" name="msem3"  id="s13" maxlength="4" autocomplete="on"></td>
+			</tr>
+			<tr>
+				<th>Sem-&#8547;</th>
+				<td><input type="month" name="sem4"  id="sy3"  autocomplete="on"></td>
+				<td><input type="marks" name="msem4"  id="s14" maxlength="4" autocomplete="on"></td>
+			</tr>
+			<tr>
+				<th>Sem-&#8548;</th>
+				<td><input type="month" name="sem5"   id="sy4" autocomplete="on"></td>
+				<td><input type="marks" name="msem5"   id="s15" maxlength="4" autocomplete="on"></td>
+			</tr>
+			<tr>
+				<th>Sem-&#8549;</th>
+				<td><input type="month" name="sem6"   id="sy5" autocomplete="on"></td>
+				<td><input type="marks" name="msem6"   id="s16" maxlength="4"  autocomplete="on"></td>
+			</tr>
+			<tr>
+				<th>Sem-&#8550;</th>
+				<td><input type="month" name="sem7"   id="sy6" autocomplete="on"></td>
+				<td><input type="marks" name="msem7"   id="s17" maxlength="4" autocomplete="on"></td>
+			</tr>
+			<tr>
+				<th>Sem-&#8551;</th>
+				<td><input type="month" name="sem8"   id="sy7" autocomplete="on"></td>
+				<td><input type="marks" name="msem8"    id="s18" maxlength="4" autocomplete="on"></td>
+			</tr>
+</table>
+</fieldset>
+<fieldset style="border-radius:30px;border:3px solid black;">
+	<legend><h1 style="text-shadow:5px 5px 5px red;">College Details</h1></legend>
+		<table align="center">
+			<tr>
+				<th>College Name</th>
+				<td>:</td>
+				<td><input type="text" name="collegename" id="coll1"  autocomplete="on" size="38"></td>
+			</tr>
+			<tr>
+				<th>Department Name</th>
+					<td>:</td>
+					<td><select name="dname" id="dept1" >
+					<option selected="~Select the Department~" disabled="~Select the Department~">Select the Department</option>
+					<option value="Information Technology" >Information Technology</option>
+					<option value="Computer">Computer</option>
+					<option value="Electronics and Telecommunications">Electronics and Telecommunications</option>
+					<option value="Mechanical">Mechanical</option>
+					</select></td>
+			</tr>
+			<tr>
+				<th>Year</th>
+				<td>:</td>
+				<td><select name="year" id="y1" >
+				<option selected="~Select the Year~" disabled="~Select the Year~">Select the Year</option>
+				<option value="First year" >First</option>
+				<option value="Second year">Second</option>
+				<option value="Third year">Third</option>
+				<option value="Fourth year">Fourth</option>
+				</select></td>
+			</tr>
+</table>
+	</fieldset>
+	<fieldset style="border-radius:30px;border:3px solid black;">
+<legend><h1 style="text-shadow:5px 5px 5px orange;">Additional Details</h1></legend>
+		<table align="center">
+			<tr>
+				<th>Hobby</th>
+				<td>:</td>
+				<td><input type="text" name="hobby" id="hobby1" autocomplete="on" size="38"></td>
+			</tr>
+			<tr>
+				<th>Additional Skills</th>
+				<td>:</td>
+				<td><input type="text" name="skills" id="sk1" size="38"></td>
+			</tr>
+			<tr>
+			<th><b>Techical Skills</b></th>
+				<td>:</td>	
+				<td><input type="checkbox" name="addcourses[]" value="C">C
+				<input type="checkbox" name="addcourses[]" value="c++">C++
+				<input type="checkbox" name="addcourses[]" value="java">Java
+				<input type="checkbox" name="addcourses[]" value="Web design">Web Designing
+				<input type="checkbox" name="addcourses[]" value="pyton">Python
+				<input type="checkbox" name="addcourses[]" value="Other">Other
+				</td>
+			</tr>
+		</table>
+	</fieldset> 
+<center>
+<br>
+<input type="submit" name="submit" value="submit"><br></center>
+</form>
+ 
+</body>
+</html>
